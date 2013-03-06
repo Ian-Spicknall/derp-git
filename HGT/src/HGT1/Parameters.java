@@ -6,17 +6,19 @@ public class Parameters {
 	public int MAX_TIME = 100000;
 	public double t_log_time = 100;
 	public int initInf = 100;
+	public int initInfZ = 100;
 	
 	public int N = 1000;
 	// all  the rates are in days
 	
 	// rate of starting antibiotic treatment
-	public double treat_start = 1.0 / 60.0;
+	public double treat_start = 1.0 / 30.0;
 	// rate of stopping antibiotic treatment
-	public double treat_stop = 1.0 / 60.0;
+	public double treat_stop = 1.0 / 30.0;
 	
 	// transmission coefficient 
-	public double beta = 1.0 ;
+	public double betaW = .150 ;
+	public double betaZ = .11;
 	//pathogen recovery rate (untreated)
 	public double gamma = 1.0/10.0;
 	//pathogen recovery rate (treated sensitive pathogen)
@@ -30,7 +32,7 @@ public class Parameters {
 	//uptake of transient resistant commensals
 	public double uptake = 1.0 / 10000;
 	//rate of spontaneous loss of resistant minorities
-	public double loss = 1.0 / 1000;
+	public double loss = 1.0 / 100.0;
 	
 	
 	//rate of selection for resistant minorities
@@ -40,15 +42,15 @@ public class Parameters {
 	
 	//HGT's
 	//hgt transient-to-pathogen
-	public double plasmid_t_p = 0.01;
+	public double HGT_t_p = 0.01;
 	//hgt transient-to-commensal
-	public double plasmid_t_c = 0.01;
+	public double HGT_t_c = 0.01;
 	//hgt commensal-to-pathogen
-	public double plasmid_c_p = 0.01;
+	public double HGT_c_p = 0.01;
 	//hgt pathogen-to-commensal
-	public double plasmid_p_c = 0.01;
+	public double HGT_p_c = 0.01;
 	//hgt antibiotic treatment modifier
-	public double plasmid_treat = 100.0;
+	public double HGT_treat = 100.0;
 	
 	
 	//molecular clocks
